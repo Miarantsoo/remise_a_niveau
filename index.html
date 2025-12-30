@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remise à niveau</title>
+</head>
+<body>
+    <header>
+        <h1>Support Informatique & Numérique</h1>
+        <p>Assistance, dépannage et accompagnement numérique</p>
+
+        <!-- J'ai utilisé la balise nav car cette balise permet de creer une section destinee à la navigation dans un document -->
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <!-- J'ai utilisé la balise section car elle permet de définir une section distincte du contenu de la page -->
+        <section id="accueil">
+            <h2>Présentation</h2>
+            <p>
+                Nous proposons un service de support informatique et numérique
+                destiné aux particuliers et aux petites entreprises.
+            </p>
+
+            <img src="assets/support-informatique.png"
+                alt="Technicien informatique aidant un utilisateur">
+        </section>
+
+        <section id="services">
+            <h2>Nos services</h2>
+
+            <article>
+                <h3>Dépannage informatique</h3>
+                <p>
+                    Résolution de problèmes matériels et logiciels
+                    sur ordinateurs et périphériques.
+                </p>
+            </article>
+
+            <article>
+                <h3>Installation de logiciels</h3>
+                <p>
+                    Installation et configuration de systèmes et applications
+                    adaptées à vos besoins.
+                </p>
+            </article>
+        </section>
+
+        <section id="multimedia">
+            <h2>Contenus multimédias</h2>
+
+            <article>
+                <h3>Présentation vidéo</h3>
+                <video controls>
+                    <source src="assets/presentation.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture vidéo.
+                </video>
+            </article>
+
+            <article>
+                <h3>Notre localisation</h3>
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=47.53,-18.97,47.54,-18.99&layer=mapnik&marker=-18.985883130540977,47.53276551349415"
+                    width="1000"
+                    height="500"
+                    title="Localisation">
+                </iframe>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="#" method="post" aria-label="Formulaire de contact">
+                <div>
+                    <label for="nom">Nom</label>
+                    <input
+                        type="text"
+                        id="nom"
+                        name="nom"
+                        placeholder="Votre nom"
+                        required>
+                </div>
+                <div>
+                    <label for="email">Adresse email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="exemple@email.com"
+                        required>
+                </div>
+                <div>
+                    <label for="motdepasse">Mot de passe</label>
+                    <input
+                        type="password"
+                        id="motdepasse"
+                        name="motdepasse"
+                        required>
+                </div>
+                <div>
+                    <label for="date">Date de contact souhaitée</label>
+                    <input
+                        type="date"
+                        id="date"
+                        name="date">
+                </div>
+                <div>
+                    <label for="telephone">Téléphone</label>
+                    <input
+                        type="text"
+                        id="telephone"
+                        name="telephone"
+                        placeholder="0321234567">
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <section id="tarifs">
+            <h2>Tarifs des services</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--
+                    data-disponibilite pourrait être utilisé pour filter les services affiches selon les choix de l'utilisateur
+
+                    Dans un framework frontend, il pourrait etre intégré dans un état pour adapter dynamiquement l'affichage.
+                    -->
+                    <tr data-disponibilite="sur-place">
+                        <td>Dépannage informatique</td>
+                        <td>Résolution de problèmes matériels et logiciels</td>
+                        <td>40.000Ar</td>
+                    </tr>
+                    <tr data-disponibilite="sur-place">
+                        <td>Installation système</td>
+                        <td>Installation et configuration du système d’exploitation</td>
+                        <td>20.000Ar</td>
+                    </tr>
+                    <tr data-disponibilite="distance">
+                        <td>Installation de logiciels</td>
+                        <td>Installation et configuration</td>
+                        <td>20.000Ar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Support Informatique & Numérique. Tous droits réservés.</p>
+        <p>Contact: info@supportinformatique.fr | Tél: 032 12 345 67</p>
+    </footer>
+</body>
+</html>
